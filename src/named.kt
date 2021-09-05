@@ -8,6 +8,7 @@ fun sayhi(greeting:String,vararg itemsToGreet: String) {
 fun greetPerson(greeting:String="hello",name:String="username")=println("$greeting $name")
 
 fun main() {
-    val interestingThings= arrayOf("kotlin","programming","comic books")
-    sayhi(greeting = "hi", *interestingThings)
+    val person = Person()
+    person.firstName
+    person.lastName
 }
