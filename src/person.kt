@@ -1,14 +1,20 @@
-class Person(val firstName:String, val lastName:String){
+class Person(val firstName:String="peter", val lastName:String = "parker"){
+      var nickName:String? = null
+         set(value) {
+             field = value
+             println("The new nickname is $value")
 
-init {
-    println("init 1 ")
-}
-// second constructor that does not  take parameters
-    constructor():this("patty","pater"){
-    println("secondary constructor")
-
-}
-    init{
-        println("init 2")
+         }
+    get() {
+        println("The returned value is $field")
+        return field
     }
+    fun personInfo(){
+        val nicknameToPrint = nickName ?: "no nickname"
+        println("$firstName ($nicknameToPrint) $lastName")
+    }
+
+
+
+
 }
